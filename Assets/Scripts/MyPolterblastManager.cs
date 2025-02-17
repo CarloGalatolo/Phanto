@@ -7,10 +7,10 @@ using UnityEngine;
 /// <summary>
 /// This script manages the Polterblast game object visibility based on app input focus status
 /// </summary>
-public class PolterblastManager : MonoBehaviour
+public class MyPolterblastManager : MonoBehaviour
 {
     [SerializeField] private GameObject Polterblast;
-    private bool _isVisible;
+    private bool _isVisible = true;
 
 
     private void Awake()
@@ -22,16 +22,16 @@ public class PolterblastManager : MonoBehaviour
 
     private void Start()
     {
-        if (PhantomManager.Instance is TutorialPhantomManager)
-        {
-            _isVisible = true; // Show Polterblast when not in the game context
-            OnFocusAcquired();
-        }
-        else if (GameplaySettingsManager.Instance.WavesAvailable)
-        {
-            // Polterblast visibility is dependant on the game current wave
-            GameplaySettingsManager.Instance.OnNewWave.AddListener(OnNewWave);
-        }
+        // if (PhantomManager.Instance is TutorialPhantomManager)
+        // {
+        //     _isVisible = true; // Show Polterblast when not in the game context
+        //     OnFocusAcquired();
+        // }
+        // else if (GameplaySettingsManager.Instance.WavesAvailable)
+        // {
+        //     // Polterblast visibility is dependant on the game current wave
+        //     GameplaySettingsManager.Instance.OnNewWave.AddListener(OnNewWave);
+        // }
     }
 
 

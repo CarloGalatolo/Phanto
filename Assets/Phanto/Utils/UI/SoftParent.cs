@@ -17,9 +17,7 @@ public class SoftParent : MonoBehaviour
     }
 
     [SerializeField] private ParentTargetType parentTarget;
-
     [SerializeField] private Transform parentTransform;
-
     [SerializeField] private Vector3 offset;
 
     private Transform _targetTransform;
@@ -45,12 +43,21 @@ public class SoftParent : MonoBehaviour
         }
     }
 
-    private void Awake()
+
+
+    void Awake()
     {
         _targetTransform = FindTargetTransform();
     }
 
-    private void Update()
+
+    void Update ()
+    {
+        AttachToChosenParent();
+    }
+
+
+    void AttachToChosenParent()
     {
         if (_targetTransform == null)
         {
@@ -61,9 +68,29 @@ public class SoftParent : MonoBehaviour
 
         transform.position = _targetTransform.TransformPoint(offset);
         transform.rotation = _targetTransform.rotation;
+
+        FixTransform();
     }
 
-    private Transform FindTargetTransform()
+
+    private void FixTransform()
+    {
+        // BUGFIX: For some reason, the Polterblast attaches to the hand rotated.
+		// This function offsets the transform to make the Polterblast gripped as a gun when hand tracking is active.
+        if (parentTarget == ParentTargetType.RightHand)
+        {
+            transform.Translate(-0.09f, -0.02f, 0);
+            transform.Rotate(0, -90, 90);
+        }
+        else if (parentTarget == ParentTargetType.LeftHand)
+        {
+            transform.Translate(0.09f, 0.02f, 0);
+            transform.Rotate(180, -90, -90);
+        }
+    }
+	
+
+    Transform FindTargetTransform()
     {
         switch (parentTarget)
         {

@@ -17,30 +17,30 @@
       "hash": "ae4c6e30122c0624e965434c750ee389cd172bc8"
     },
     "com.meta.xr.sdk.audio": {
-      "version": "67.0.0",
+      "version": "72.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://npm.developer.oculus.com"
     },
     "com.meta.xr.sdk.core": {
-      "version": "67.0.0",
+      "version": "72.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://npm.developer.oculus.com"
     },
     "com.meta.xr.sdk.haptics": {
-      "version": "67.0.0",
+      "version": "72.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.meta.xr.sdk.core": "67.0.0"
+        "com.meta.xr.sdk.core": "72.0.0"
       },
       "url": "https://npm.developer.oculus.com"
     },
     "com.meta.xr.sdk.interaction": {
-      "version": "67.0.0",
+      "version": "72.0.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -50,12 +50,12 @@
       "url": "https://npm.developer.oculus.com"
     },
     "com.meta.xr.sdk.interaction.ovr": {
-      "version": "67.0.0",
+      "version": "72.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.meta.xr.sdk.interaction": "67.0.0",
-        "com.meta.xr.sdk.core": "67.0.0"
+        "com.meta.xr.sdk.interaction": "72.0.0",
+        "com.meta.xr.sdk.core": "72.0.0"
       },
       "url": "https://npm.developer.oculus.com"
     },
@@ -184,9 +184,9 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
-        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -225,9 +225,9 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.modules.subsystems": "1.0.0",
         "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0",
+        "com.unity.modules.subsystems": "1.0.0",
         "com.unity.xr.legacyinputhelpers": "2.1.7"
       },
       "url": "https://packages.unity.com"

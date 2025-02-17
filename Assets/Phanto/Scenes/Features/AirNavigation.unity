@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.1728099, g: 0.21592572, b: 0.29789093, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -355,6 +355,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: 80f6e87e08fc1324384c9f3527b48ea6, type: 3}
     - target: {fileID: 5251702753280430205, guid: 3cfa20e58676d4e6bbc91111fb9425f7, type: 3}
+      propertyPath: loadAllRooms
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5251702753280430205, guid: 3cfa20e58676d4e6bbc91111fb9425f7, type: 3}
       propertyPath: ovrSceneManager
       value: 
       objectReference: {fileID: 8170836792747693095, guid: 5195793fee703ca4981afb1023bb9f39, type: 3}
@@ -386,6 +390,10 @@ PrefabInstance:
       propertyPath: staticMeshPrefabs.Array.data[1]
       value: 
       objectReference: {fileID: 7073015037563316502, guid: ec5d8cac65645034daac13546f985dca, type: 3}
+    - target: {fileID: 5251702753280430205, guid: 3cfa20e58676d4e6bbc91111fb9425f7, type: 3}
+      propertyPath: SceneDataLoaded.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7973531395778442178, guid: 3cfa20e58676d4e6bbc91111fb9425f7, type: 3}
       propertyPath: m_Name
       value: SceneDataLoader
